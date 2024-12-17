@@ -95,7 +95,7 @@ function AuthRegister() {
                         placeholder="Re-enter Your Password"
                         required
                     />
-                    <p className="flex gap-1 pt-1 text-gray-500 text-sm font-bold flex-row"><input type="checkbox" className='cursor-pointer' />Show Password <p className='text-blue-800 pl-40 font-semibold'><a href="#">forget password</a></p></p>
+                    {/* <p className="flex gap-1 pt-1 text-gray-500 text-sm font-bold flex-row"><input type="checkbox" className='cursor-pointer' />Show Password <p className='text-blue-800 pl-40 font-semibold'><a href="#">forget password</a></p></p> */}
                 </div>
 
                 {/* Submit Button */}
