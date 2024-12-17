@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const session = require('express-session')
+cosnt sesseion = require('express-session');
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
 const authRouter = require('./routes/auth/auth-routes');
@@ -40,7 +41,7 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-app.use(cookieParser());
+app.use(cookieParser()); 
 app.use(express.json());
 app.use('/api/auth', authRouter)
 
