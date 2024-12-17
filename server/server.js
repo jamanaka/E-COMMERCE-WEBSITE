@@ -1,5 +1,9 @@
 const express = require('express');
 const mongoose = require('mongoose');
+<<<<<<< HEAD
+=======
+const session = require('express-session')
+>>>>>>> 7c8d80ee6173277a8ce7c6a5ffa97e1a969a0fd2
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
 const authRouter = require('./routes/auth/auth-routes');
@@ -36,6 +40,8 @@ const corsOptions = {
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed methods
     credentials: true // Allow credentials (optional)
 };
+
+app.use(session())
 
 app.use(cors(corsOptions));
 

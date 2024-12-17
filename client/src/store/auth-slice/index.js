@@ -1,5 +1,6 @@
 // import create slice from reduxjs toolkit
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import axios from 'axios';
 
 // Define initial state
 const initialState = {
@@ -40,7 +41,7 @@ export const loginUser = createAsyncThunk('/auth/login', async (formData, { disp
 export const checkAuth = createAsyncThunk('/auth/checkauth', async () => {
   // console.log(checkAuth);
   try {
-      const response = await fetch("http://localhost:4000/api/auth/check-auth", {
+      const response = await axios.get("http://localhost:4000/api/auth/check-auth", {
           method: 'get',
           credentials: 'include', // Include cookies
       });

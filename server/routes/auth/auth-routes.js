@@ -14,7 +14,7 @@ router.post('/login', loginUser);
 
 router.post('/logout', logout );
 
-router.get('/api/auth/check-auth', authMiddleware, (req,res)=>{
+router.get('/check-auth', authMiddleware, (req,res)=>{
     const user = req.user;
     res.status(200).json({
         success : true,
